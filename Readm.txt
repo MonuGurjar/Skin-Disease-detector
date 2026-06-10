@@ -1,0 +1,43 @@
+==================================================
+ SKIN DISEASE AI - SETUP & EXECUTION GUIDE
+==================================================
+Follow these exact steps to set up the project from scratch, train the AI model, and run the Web UI.
+--------------------------------------------------
+ STEP 1: INITIALIZE VIRTUAL ENVIRONMENT
+--------------------------------------------------
+Since you are using `system default python or 3.13.13(recommended)` to manage your Python environments, open your terminal inside this project folder and create a new virtual environment:
+    python -m venv .venv
+Next, activate the virtual environment so that your terminal uses the isolated Python version:
+    On Linux/macOS:   source .venv/bin/activate
+    On Windows:       .venv\Scripts\activate
+You should now see `(.venv)` at the start of your terminal prompt.
+--------------------------------------------------
+ STEP 2: INSTALL DEPENDENCIES
+--------------------------------------------------
+
+    pip install -r requirements.txt
+
+--------------------------------------------------
+ STEP 3: TRAIN THE AI MODEL ✅
+--------------------------------------------------
+Before the Web UI can work, the AI needs to learn how to identify skin diseases from the `dataset_dir`. Run the training script:
+- Phase 1 (Transfer Learning) will run quickly.
+- Phase 2 (Fine Tuning) will take longer but will dramatically boost accuracy.
+- Keep an eye on your laptop's temperatures, as this will heavily utilize your GPU.
+- When finished, the script will generate a file called `model.pth`.
+--------------------------------------------------
+ STEP 4: START THE WEB APP
+--------------------------------------------------
+Once the training is completely finished and the `.pth` file exists, you can start the Flask web application:
+    python app.py
+The terminal will say:
+    * Running on http://127.0.0.1:5000
+1. Open your web browser (Chrome, Firefox, etc.).
+2. Go to: http://127.0.0.1:5000
+3. You will see the new "Skin Disease AI Tester" Web UI.
+4. Click "Choose File", select any `.jpg` image from the dataset folders, and click "Analyze Image" to see the real AI prediction!
+--------------------------------------------------
+ OPTIONAL: QUICK COMMAND-LINE TEST
+--------------------------------------------------
+If you just want to test a single image in your terminal without starting the web interface, you can run:
+    python test_inference_pytorch.py dataset_dir/HAM10000_images_part_1/ISIC_0027419.jpg
