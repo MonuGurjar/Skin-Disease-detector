@@ -1,0 +1,25 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Large archives and binaries
+*.zip
+*.tar.gz
+*.7z
+*.exe
+archive.zip
+
+# Large dataset raw files
+dataset_dir/HAM10000_images_part_*
+dataset_dir/ham10000_images_part_*
+
+# Logs and temp files
+*.log
+.DS_Store
+Thumbs.db

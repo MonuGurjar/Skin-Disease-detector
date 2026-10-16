@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  skin-disease-detector:
+    build: .
+    container_name: skin-disease-ai
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+    restart: unless-stopped
