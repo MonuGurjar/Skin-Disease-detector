@@ -6,9 +6,14 @@ This package is completely self-contained. Anyone receiving this folder can run 
 
 ## ⚡ How to Run
 
-### Option 1: Windows (Double-Click)
-1. Double-click **`run.bat`**
-2. The script will automatically check your Python environment, install required packages, start the web server, and open your browser to **`http://127.0.0.1:5000`**!
+### Option 1: Windows (Installation & Run)
+1. **To install:** Double-click **`install.bat`** (or right-click `install.ps1` -> "Run with PowerShell").
+   - Automatically detects or installs Python 3.11.
+   - Detects NVIDIA GPU (CUDA) or CPU automatically.
+   - Sets up virtual environment and installs dependencies.
+   - Creates a **"Skin Disease AI Detector"** shortcut on your Desktop.
+2. **To run anytime:** Double-click **`run.bat`** (or the Desktop shortcut).
+   - Starts the server and automatically opens your browser at **`http://127.0.0.1:5000`**!
 
 ---
 
